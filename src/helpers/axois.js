@@ -21,36 +21,51 @@ const SERVER_API_URL =
         });
     });
   }
-  export function axiosPost(url, body = {}, headers = {}) {
+  export function axiosLoginPost(url, body = {}) {
     return new Promise(async (resolve, reject) => {
       // var config = {
       //   headers: {
-      //     token: JSON.parse(localStorage.getItem("token")),
-      //     ...headers,
+      //     Authorization: `Bearer ${(localStorage.getItem("token"))}`
       //   },
       // };
-      await Axios.post(SERVER_API_URL + url, body, 
+      await Axios.post(SERVER_API_URL + url, body,
         // config
         )
         .then((res) => {
           resolve(res.data);
-          console.log(res);
         })
         .catch((err) => {
           reject(err);
-          console.log(err);
+        });
+    });
+  }
+  export function axiosPost(url, body = {}) {
+    return new Promise(async (resolve, reject) => {
+      var config = {
+        headers: {
+          Authorization: `Bearer ${(localStorage.getItem("token"))}`
+        },
+      };
+      await Axios.post(SERVER_API_URL + url, body, 
+        config
+        )
+        .then((res) => {
+          resolve(res.data);
+        })
+        .catch((err) => {
+          reject(err);
         });
     });
   }
   export function axiosPut(url, body = {}) {
     return new Promise(async (resolve, reject) => {
-      // var config = {
-      //   headers: {
-      //     token: JSON.parse(localStorage.getItem("token")),
-      //   },
-      // };
+      var config = {
+        headers: {
+          Authorization: `Bearer ${(localStorage.getItem("token"))}`
+        },
+      };
       await Axios.put(SERVER_API_URL + url, body,
-        //config
+        config
         )
         .then((res) => {
           resolve(res.data);
@@ -62,13 +77,13 @@ const SERVER_API_URL =
   }
   export function axiosPatch(url, body = {}) {
     return new Promise(async (resolve, reject) => {
-      // var config = {
-      //   headers: {
-      //     token: JSON.parse(localStorage.getItem("token")),
-      //   },
-      // };
+      var config = {
+        headers: {
+          Authorization: `Bearer ${(localStorage.getItem("token"))}`
+        },
+      };
       await Axios.patch(SERVER_API_URL + url, body, 
-        // config
+        config
         )
         .then((res) => {
           resolve(res.data);
@@ -80,13 +95,13 @@ const SERVER_API_URL =
   }
   export function axiosDelete(url) {
     return new Promise(async (resolve, reject) => {
-      // var config = {
-      //   headers: {
-      //     token: JSON.parse(localStorage.getItem("token")),
-      //   },
-      // };
+      var config = {
+        headers: {
+          Authorization: `Bearer ${(localStorage.getItem("token"))}`
+        },
+      };
       await Axios.delete(SERVER_API_URL + url,
-        // config
+        config
         )
         .then((res) => {
           resolve(res.data);
