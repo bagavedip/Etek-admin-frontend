@@ -1,0 +1,47 @@
+.custom-dropdown{
+    box-shadow: inset;
+    color: black;
+    background-color: White;
+}
+.asset-body{
+    margin-top: 30px;
+}
+.asset-container{
+    /* height: 100vh; */
+    margin: 1% 10% 10% 10%;
+  }
+
+.asset-container input{
+    width: 150px;
+    margin: 1%;
+}
+/* .asset-option{
+    margin-left: 10%;
+    margin-right: 10%;
+} */
+
+.wrapper label{
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.wrapper label p{
+    margin-bottom: 0.5rem;
+}
+
+.wrapper {
+    padding: 5px 20px;
+}
+
+.wrapper fieldset {
+    margin: 20px 0;
+}
+.textbox{
+    padding: 10px;
+}
+
+.assetbackbutton{
+    margin-left: 10%;
+    border-width: 0px;
+    background-color: transparent;
+  }

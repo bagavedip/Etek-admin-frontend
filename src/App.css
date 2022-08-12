@@ -1,0 +1,169 @@
+.App {
+  font-family: sans-serif;
+  /* text-align: center; */
+  position: relative;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.admin-nav-button{
+  background-color: #ffffff00;
+  border-radius: 12px;
+  border-color: #51a4ad;
+  color:#51a4ad
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+select{
+  padding: 5px;
+  width: 100%;
+}
+
+.App-header {
+  background-color: #26555A;
+  min-height: 5.6vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-footer {
+  background-color: #26555A;
+  min-height: 5.6vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin)
+}
+
+a{
+  color:rgb(250, 250, 250) !important;
+  font-size: 19.2px;
+}
+.container{
+  margin: auto;
+  width: 700px;
+  /* height: 100vh; */
+  margin-top: 25%;
+}
+
+.navbarlink{
+  font-family:'Segoe UI';
+  font-size: 19.2px;
+  font-style: normal;
+  padding: 20px;
+}
+
+.navbar-right{
+  margin-left: 56%;
+}
+.option{
+  margin-left: 10%;
+}
+.subheading{
+  margin-left: 10%;
+}
+.links-brand{
+  margin-right: auto !important;
+  text-decoration: none !important;
+  color: rgba(0,0,0,.9) !important;
+  font-size: 1.4vw !important;
+
+}
+
+.link-search
+{
+  margin-right: 38% !important;
+}
+
+.link-search-button
+{
+  border:none !important;
+  border-bottom: 1px solid #ced4da !important;
+}
+.dropdown-test
+{
+  display: block !important;
+  margin-left: 20% !important;
+    margin-bottom: -7% !important;
+}
+.create
+{
+  margin-bottom: 3px !important;
+}
+.view
+{
+  margin-bottom: 3px !important;
+}
+
+.dropdown-test-new
+{
+  display:block !important;
+}
+.pro-sidebar-inner{
+  background-color: aliceblue !important;
+  color: black;
+}
+
+.pro-sidebar-layout{
+  margin-top: 10px !important;
+}
+
+.chart{
+  margin-top: -24% !important;
+}
+
+.font-character{
+  font-family: 'Times New Roman';
+  color: white;
+}
+
+
+.text-new-button
+{
+  margin-top: -18% !important;
+  color: #00000066;
+}
+
+.toggle{
+  margin-left: 21% !important;
+  margin-top: -15% !important;
+}
+
+btn-primary{
+  background: #51A7C2 !important;
+  border-radius: 10px;
+}
+
+.container-button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inner-container{
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  align-items: center;
+}
+
+table th div img{
+  cursor: pointer;
+}
+
+.dialog{
+  width: 500px;
+  height: 300px;
+  border-radius: 21px;
+}

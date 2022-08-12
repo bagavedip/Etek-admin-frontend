@@ -1,0 +1,221 @@
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    /* width: 150px; */
+    user-select: none;
+    position: relative;
+    margin-left: 10px;
+    display: inline-block;
+  }
+
+  .dropdown .dropdown-btn{
+    border-style: solid;
+    border-width: 0.18rem;
+    border-color: #488d95e8;
+    border-radius: 12px;
+    padding: 13px 14px;
+    background:#ffffff00;
+    font-weight:bold;
+    color:#488d95e8;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .dropdown .dropdown-btn:active{
+    background:#488d95e8;
+    font-weight:bold;
+    color:#f8fbfbe8;
+  }
+  .dropdown .dropdown-content{
+    position: absolute;
+    top:100%;
+    left: -100px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 3px 3px 10px 6px rgba(0,0,0,0.06);
+    font-weight:555;
+    color:#333;
+    width: 188%;
+  }
+
+  .dropdown .download-dropdown-content{
+    position: absolute;
+    top:100%;
+    left: -17px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 3px 3px 10px 6px rgba(0,0,0,0.06);
+    font-weight:555;
+    color:#333;
+    width: 110%;
+  }
+
+  .dropdown .import-dropdown-content{
+    position: absolute;
+    top:100%;
+    left: -65px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 3px 3px 10px 6px rgba(0,0,0,0.06);
+    font-weight:555;
+    color:#333;
+    width: 147%;
+  }
+
+  .dropdown .dropdown-content .dropdown-item{
+    padding: 10px;
+    transition: all 0.2s;
+  }
+
+  .dropdown .download-dropdown-content .dropdown-item{
+    padding: 10px;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .dropdown .import-dropdown-content .dropdown-item{
+    padding: 10px;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .dropdown .download-dropdown-content .dropdown-item a:link{
+    color: #212529 !important;
+    text-decoration: none;
+    
+  }
+
+  .dropdown .import-dropdown-content .dropdown-item a:link{
+    color: #212529 !important;
+    text-decoration: none;
+    
+  }
+
+  .dropdown .dropdown-content .dropdown-item .plusbutton{
+    cursor: pointer;
+  }
+
+  .dropdown .dropdown-content .dropdown-item .viewbutton{
+    cursor: pointer;
+  }
+
+  .dropdown .dropdown-content .dropdown-items:hover{
+    background: #f4f4f4;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .download-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .import-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content, .dropdown:hover .download-dropdown-content, .dropdown:hover .import-dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+
+  .asset-dropdown{
+    width: 100%;
+    user-select: none;
+    
+    position: relative;
+  }
+
+  .asset-dropdown label{
+    margin-bottom: 9px !important;
+  }
+
+  .asset-dropdown .asset-dropdown-btn{
+    padding: 14px 20px;
+    background:#fcfcfce8;
+    border-style: solid;
+    border-width: 1px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .asset-dropdown .asset-dropdown-btn-new{
+    padding: 3px 20px;
+    background:#fcfcfce8;
+    border-style: solid;
+    border-width: 1px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .asset-dropdown .asset-dropdown-content{
+    position: absolute;
+    border-style: bold !important;
+    border-color: black;
+    border-width: 1px;
+    z-index: 1;
+    top: 100%;
+    padding: 10px 13px;
+    background: #efefef;
+    color: #000;
+    width: 100%;
+    
+  }
+  .asset-dropdown .asset-dropdown-content .asset-dropdown-item{
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .asset-dropdown .asset-dropdown-content .asset-dropdown-items:hover{
+    background: #f4f4f4;
+  }
