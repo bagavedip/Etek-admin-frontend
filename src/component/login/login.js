@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { axiosPost } from "../../helpers/axois";
+import { axiosLoginPost } from "../../helpers/axois";
 import login from '../../image/Login.png';
 import logo from "../../image/sita1.png";
 import powered from "../../image/powered.png";
@@ -32,21 +32,21 @@ const Login= () => {
 
     const SubmitForm = (e) => {
       e.preventDefault();
-  
+
       const body = {action:"EMAIL_LOGIN",
         payload:{ email: email, password: password }};
       const url = "login/";
-      // console.log(body)
+      console.log(body)
 
-      axiosPost(url,body)
+      axiosLoginPost(url,body)
         .then((res) => {
           const token = res.access_token;
+          console.log(token)
           localStorage.setItem('token', token)
           navigate("/assets")
         })
         .catch(error=>{
-          console.log(error.response.data["detail"])
-          alert(error.response.data["detail"])
+          alert("Please Enter a Valid Credential")
         })
     };
 
@@ -55,20 +55,20 @@ const Login= () => {
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-md-9 col-xl-9 p-0'>
-            <img src={login} alt="Login" width='100%' height='auto'/>
+            <img src={login} alt="Login" width='99%' height='auto'/>
           </div>
           <div className='col-md-3 col-xl-3'>
             <img src={logo} alt="logo" width='30%' height='auto' style={{marginLeft:"10rem", marginTop:"7rem"}}/>
             <h2 className='text-center my-5'>Login</h2>
             <form className='form-group col-md-8' style={{marginLeft:"5rem"}} onSubmit={SubmitForm}>
-              <input 
-                className='form-control' 
+              <input required
+                className='form-control'
                 placeholder='Enter Email'
                     onChange={(e) => setEmail(e.target.value)}
                 />
               <br/>
               <div className='form-control'>
-                <input 
+                <input required
                     style={{border:0, width:"91%"}}
                     type={passwordShown ? "text" : "password"}
                     placeholder='Enter Password'
@@ -76,18 +76,18 @@ const Login= () => {
                 />
                 <i onClick={togglePasswordVisiblity}>{eye}</i>
               </div>
-              <br/>                                                       
+              <br/>
               <button type='submit' className='btn btn-primary btn-block rounded-20 w-100 ' style={{background: "#51A7C2",borderRadius: "10px"}}>Submit</button>
               <br/>
               <br />
-              {/* <button 
-                  className='btn btn-success btn-block rounded-0 w-100' 
+              {/* <button
+                  className='btn btn-success btn-block rounded-0 w-100'
                   type="button"
                   onClick={() => navigate('/register-host')}
               >Register </button>                                             */}
               <br/>
             </form>
-                      
+
             <br/>
 		          <div style={{position: "fixed",right:"0", width: "24%", bottom: "20px"}}>
                 <div style={{float:"left", bottom:"15px", position:"fixed"}}>
